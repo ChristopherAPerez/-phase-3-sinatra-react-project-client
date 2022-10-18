@@ -34,7 +34,7 @@ function App() {
     }
 
     return (
-        <main>
+        <main id="main">
             <Header 
             />
             <NewAthlete 

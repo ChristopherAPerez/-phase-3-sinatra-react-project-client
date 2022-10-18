@@ -3,12 +3,12 @@ import Edit from "./Edit";
 
 function Athlete({ player, onPlayerDelete, onUpdatePlayer }){
 
+    const[playersName, setPlayersName] = useState(player.name)
+
     const [edit, setEdit] = useState(false);
-    
-    // console.log(onPlayerDelete, onUpdatePlayer)
 
     function handleUpdate(updatedPlayer) {
-        setEdit(false);
+        setEdit(!edit);
         onUpdatePlayer(updatedPlayer);
       }
 
@@ -21,9 +21,15 @@ function Athlete({ player, onPlayerDelete, onUpdatePlayer }){
 
     return(
         <ul>
-            <p>{player.name}</p>
-            <p>{player.position}</p>
-            <p>{player.jersey}</p>
+            {edit ? (
+                <Edit
+                player={player}
+                name={playersName}
+                handleUpdate={handleUpdate}
+                />
+            ) : (
+            <p>Name: {player.name} | Position: {player.position} | Jersey: #{player.jersey_number}</p>
+            )}
             <button onClick={handleUpdate}>
             ✍️
             </button>

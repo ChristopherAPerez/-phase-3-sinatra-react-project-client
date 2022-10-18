@@ -34,18 +34,21 @@ function NewAthlete({ onAddPlayer }) {
     return (
 
       <form onSubmit={handleSubmit}>
+        <h3>Name:</h3>
         <input
           type="text"
           name="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
+        <h3>Position:</h3>
         <input
           type="text"
           name="position"
           value={position}
           onChange={(e) => setPosition(e.target.value)}
         />
+        <h3>Jersey #:</h3>
         <input
           type="text"
           name="jersey"
