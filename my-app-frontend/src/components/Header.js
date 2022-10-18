@@ -2,11 +2,8 @@ import React from "react";
 
 function Header() {
   return (
-    <header>
-      <h1>AthElites App</h1>
-      <div>
-        
-      </div>
+    <header className="header" >
+      <h2>⚾️ 🏈 🏀 ⚽️ AthElites App ⚽️ 🏀 🏈 ⚾️</h2>
     </header>
   );
 }

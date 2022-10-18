@@ -3,7 +3,7 @@ import Athlete from "./Athlete";
 
 function AthleteList({ players, onPlayerDelete, onUpdatePlayer}) {
   return (
-    <div>
+    <div className="list">
       <ul>
         {players.map((player) => (
           <Athlete

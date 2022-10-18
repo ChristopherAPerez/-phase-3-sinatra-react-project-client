@@ -19,7 +19,7 @@ function NewAthlete({ onAddPlayer }) {
           body: JSON.stringify({
             name: name,
             position: position,
-            jersey: jersey
+            jersey_number: jersey
           }),
       })
       .then((r) => r.json())
@@ -33,28 +33,30 @@ function NewAthlete({ onAddPlayer }) {
 
     return (
 
-      <form onSubmit={handleSubmit}>
-        <h3>Name:</h3>
+      <form className="form" onSubmit={handleSubmit}>
+        <p>Name</p>
         <input
           type="text"
           name="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <h3>Position:</h3>
+        <p>Position</p>
         <input
           type="text"
           name="position"
           value={position}
           onChange={(e) => setPosition(e.target.value)}
         />
-        <h3>Jersey #:</h3>
+        <p>Jersey #</p>
         <input
           type="text"
           name="jersey"
           value={jersey}
           onChange={(e) => setJersey(e.target.value)}
         />
+        <br/>
+        <br/>
         <button type="submit">Add Player</button>
       </form>
 

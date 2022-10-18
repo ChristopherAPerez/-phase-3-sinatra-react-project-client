@@ -23,7 +23,7 @@ function Edit( { player, name, handleUpdate } ) {
       }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="edit" onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"

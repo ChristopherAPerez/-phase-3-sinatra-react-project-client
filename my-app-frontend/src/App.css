@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,37 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+/* Project css */
+
+main {
+  background-color: purple;
+  display: grid;
+  max-width: 600px;
+  margin: 100px auto;
+  transition: all 0.5s;
+  box-shadow: 5px 5px 15px -6px #8c8c8c;
+}
+
+header {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+list {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+edit {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
