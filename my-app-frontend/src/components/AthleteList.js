@@ -7,7 +7,7 @@ function AthleteList({ players, onPlayerDelete, onUpdatePlayer}) {
       <ul>
         {players.map((player) => (
           <Athlete
-            id={player.id}
+            key={player.id}
             player={player}
             onPlayerDelete={onPlayerDelete}
             onUpdatePlayer={onUpdatePlayer}

@@ -1,22 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
+import Edit from "./Edit";
 
-function Athlete({ id, player, onPlayerDelete, onUpdatePlayer }){
+function Athlete({ player, onPlayerDelete, onUpdatePlayer }){
 
-    console.log(onPlayerDelete, onUpdatePlayer)
+    const [edit, setEdit] = useState(false);
+    
+    // console.log(onPlayerDelete, onUpdatePlayer)
+
+    function handleUpdate(updatedPlayer) {
+        setEdit(false);
+        onUpdatePlayer(updatedPlayer);
+      }
+
+    function handleDelete() {
+        fetch(`http://localhost:9292/players/${player.id}`, {
+          method: "DELETE",
+        });
+        onPlayerDelete(player.id);
+      }
 
     return(
-        <li>
-            <p>{id}</p>
+        <ul>
             <p>{player.name}</p>
             <p>{player.position}</p>
             <p>{player.jersey}</p>
-            <button>
-                edit
+            <button onClick={handleUpdate}>
+            ✍️
             </button>
-            <button>
-                delete
+            <button onClick={handleDelete}>
+            ❌
             </button>
-        </li>
+        </ul>
     );
 
 }
