@@ -5,7 +5,7 @@ This application allows users to create their very own list of favorite athletes
 
 **BACKEND LINK:** https://github.com/ChristopherAPerez/phase-3-sinatra-react-project-server
 
-**LIVE LINK:** 
+**LIVE LINK:** https://youtu.be/IDxVaTVttFw
 
 
 #### How to Run
